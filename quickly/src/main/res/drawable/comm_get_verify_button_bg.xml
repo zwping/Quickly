@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--预计获取验证码大小为 120/40 -->
+
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@android:color/darker_gray" />
+
+            <corners android:radius="5dp" />
+
+        </shape>
+
+    </item>
+
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@android:color/darker_gray" />
+
+            <corners android:radius="5dp" />
+
+        </shape>
+
+    </item>
+
+    <item>
+
+        <shape>
+            <solid android:color="#ff0066" />
+
+            <corners android:radius="5dp" />
+
+        </shape>
+
+    </item>
+
+</selector>

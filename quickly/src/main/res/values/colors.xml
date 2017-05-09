@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+100% — FF
+95% — F2
+90% — E6
+85% — D9
+80% — CC
+75% — BF
+70% — B3
+65% — A6
+60% — 99
+55% — 8C
+50% — 80
+45% — 73
+40% — 66
+35% — 59
+30% — 4D
+25% — 40
+20% — 33
+15% — 26
+10% — 1A
+5% — 0D
+0% — 00
+格式如#00FFFFFF，前两位代表不透明度的十六进制。00表示完全透明，FF就是全不透明。依次递增
+-->
+<resources>
+
+    <color name="main_color">#FF1f1f1f</color>  <!--主题色1 status bar -->
+    <color name="main_color2">#FF32a428</color>  <!--主题色2 项目中按钮的颜色-->
+    <color name="main_bg">#FFebeff2</color>  <!--背景色 项目中背景色-->
+    <color name="line_color">#FFc3c3c3</color>  <!--线的颜色-->
+
+    <!--apple-->
+    <color name="apple_blue">#0076ff</color>
+
+    <!--comm-->
+    <color name="et_bg">#FFFFFFFF</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white90">#E6FFFFFF</color>
+    <color name="white70">#B3FFFFFF</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="white30">#4DFFFFFF</color>
+    <color name="white05">#0DFFFFFF</color>
+    <color name="black90">#E6000000</color>
+    <color name="black80">#CC000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black40">#66000000</color>
+    <color name="black30">#4D000000</color>
+    <color name="black20">#33000000</color>
+    <color name="black">#FF000000</color>
+    <color name="popup_bg">#8f000000</color>
+
+</resources>

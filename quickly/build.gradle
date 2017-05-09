@@ -1,0 +1,99 @@
+apply plugin: 'com.android.library'                                                                 //说明module的类型，com.android.application为程序，com.android.library为库
+//apply plugin: 'com.android.application'
+
+def buildSdkVersion = 25
+def buildToolVersion = "25.0.2"
+def supportVersion = "25.2.0"
+
+android {
+    compileSdkVersion buildSdkVersion                                                               //编译的SDK版本
+    buildToolsVersion buildToolVersion                                                              //编译的Tools版本
+    defaultConfig {                                                                                 //默认配置
+//        applicationId "zwp.Quickly"                                                               //应用程序的包名
+        minSdkVersion 15                                                                            //支持的最低版本
+        targetSdkVersion 22                                                                         //支持的目标版本
+        versionCode 1                                                                               //版本号
+        versionName "1.0.01"                                                                        //版本名
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    sourceSets {//目录指向配置
+//        main {
+//              jniLibs.srcDirs = ['libs']//指定lib库目录
+//        }
+//    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // 单元测试
+    testCompile 'junit:junit:4.12'
+    // 添加所有控件
+    compile 'com.android.support:design:' + supportVersion
+    // 导入v4包，方便部分依赖使用
+    compile 'com.android.support:support-v4:' + supportVersion
+    //https://github.com/orhanobut/hawk
+    compile 'com.orhanobut:hawk:2.0.1'
+    //https://github.com/jeasonlzy/okhttp-OkGo/releases
+    compile 'com.lzy.net:okgo:2.1.4'
+    //    compile 'com.lzy.net:okrx:0.1.0'        //RxJava扩展支持，根据需要添加
+    //    compile 'com.lzy.net:okserver:1.1.0'    //下载管理和上传管理扩展，根据需要添加
+    //https://github.com/orhanobut/logger
+    compile 'com.orhanobut:logger:1.15'
+    //maven { url "https://jitpack.io" } https://github.com/razerdp/BasePopup/releases
+    compile 'com.github.razerdp:BasePopup:v1.7.0'
+    //https://github.com/bumptech/glide/releases
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //https://github.com/square/picasso/releases
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //https://github.com/google/gson/releases
+    compile 'com.google.code.gson:gson:2.8.0'
+    //https://github.com/LuckyJayce/ViewPagerIndicator/releases
+    compile 'com.shizhefei:ViewPagerIndicator:1.1.4'
+    //https://github.com/barteksc/AndroidPdfViewer/releases
+    compile 'com.github.barteksc:android-pdf-viewer:2.5.0'
+    //maven { url "https://jitpack.io" }   https://github.com/CymChad/BaseRecyclerViewAdapterHelper/releases
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.8.2'
+    //https://github.com/ldoublem/LoadingView
+    compile 'com.ldoublem.loadingview:loadingviewlib:1.0'
+    //https://github.com/jeasonlzy/ImagePicker
+    compile 'com.lzy.widget:imagepicker:0.5.0'
+    // banner   https://github.com/youth5201314/banner
+    compile 'com.youth.banner:banner:1.4.9'
+    //https://github.com/kyleduo/SwitchButton
+    compile 'com.kyleduo.switchbutton:library:1.4.5'
+    //https://github.com/Curzibn/Luban
+    compile 'top.zibin:Luban:1.0.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    //https://github.com/siyamed/android-shape-imageview
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    //https://github.com/lopspower/CircularProgressBar
+    compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+    //https://github.com/FinalTeam/RxGalleryFinal
+    //compile 'cn.finalteam.rxgalleryfinal:library:0.0.8'
+    //https://github.com/square/leakcanary
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //maven { url "https://jitpack.io" }  https://github.com/mcxtzhang/SwipeDelMenuLayout
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5'
+    //https://github.com/bm-x/PhotoView
+    compile 'com.bm.photoview:library:1.4.1'
+    //https://github.com/JakeWharton/butterknife/releases 必须写在主模块中
+    //compile 'com.jakewharton:butterknife:8.5.1'
+    //annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=20170307182353#_2
+    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //https://github.com/Bigkoo/Android-PickerView/wiki/中文说明文档（3.x版）
+    compile 'com.contrarywind:Android-PickerView:3.2.4'
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comm_button"
+    android:gravity="center"
+    android:textSize="14sp"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+<!--当前匹配了getVerify，请勿随意修改以上配置-->

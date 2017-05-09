@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:padding="0dp"
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/transparent"
+    android:layout_height="20dp"/>
+
+<!--沉侵式状态栏 替代高度布局-->
+<!--BarUtils.replaceStatusBarHeight(activity(), statusBar);-->

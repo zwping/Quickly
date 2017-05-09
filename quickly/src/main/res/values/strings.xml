@@ -1,0 +1,78 @@
+<resources>
+    <!--半角：\u0020-->
+    <!--全角：\u3000-->
+    <string name="app_name">Quickly</string>
+
+    <!--常用词语-->
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="photo_title">上传头像</string>
+    <string name="photo_select">从相册中选取</string>
+    <string name="photograph">拍照</string>
+    <string name="cancel">取消</string>
+    <string name="sex">性别</string>
+    <string name="hint">提示</string>
+    <string name="boy">男</string>
+    <string name="girl">女</string>
+    <string name="pic">图片</string>
+    <string name="voice">语音</string>
+    <string name="draft">草稿</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="pay_title">在线付款</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="wechatpay">微信支付</string>
+    <string name="check_address">请选择地址</string>
+    <string name="unknown">未知来源</string>
+    <string name="back">返回</string>
+    <string name="confirm">确认</string>
+    <string name="then_click_exit_soft">再按一次退出程序</string>
+    <string name="network_difference">网络环境不佳，请稍后...</string>
+    <string name="function_temp_open">功能正在开发中...</string>
+    <string name="no_more_content">暂无更多内容</string>
+    <string name="network_error">网络异常！</string>
+    <string name="get_fail">获取失败</string>
+    <string name="pdf_get_fail">pdf获取失败</string>
+    <string name="camera_not_available_is_to_open">无法获取摄像头数据，是否前去检查摄像头权限</string>
+    <string name="recording_not_available_go_to_open">无法获取录音(语音)数据，是否前去检查开录音(语音)权限</string>
+
+
+    <!--封装的输入框提示语-->
+    <string name="read_and_confirm_agreement">请查看协议，并确认协议</string>
+    <string name="ac_hint">请输入手机号/邮箱账号</string>
+    <string name="phone_ac_hint">请输入手机号</string>
+    <string name="phone_warning">手机账号格式不对</string>
+    <string name="email_ac_hint">请输入邮箱账号</string>
+    <string name="email_warning">邮箱号格式不对</string>
+    <!--<string name="password_hint">请输入密码（6~20位英文字母数字组合）</string>-->
+    <string name="password_hint">请输入密码</string>
+    <string name="modify_password_hint">请输入新密码（6~20位英文字母数字组合）</string>
+    <string name="confirm_password_hint">请再次输入密码</string>
+    <string name="ps_length_max_6">密码必须大于等于6位</string>
+    <string name="ps_verify">密码格式错误，请重新输入</string>
+    <string name="please_re_input_ps">请再次输入密码</string>
+    <string name="two_ps_warning">两次填写的密码不一致，请重新填写</string>
+    <string name="verify_hint">请输入验证码</string>
+    <string name="verify_phone_hint">请输入手机验证码</string>
+    <string name="verify_email_hint">请输入邮箱验证码</string>
+    <string name="real_name_hint">请输入真实姓名</string>
+    <string name="real_name_waring">真实姓名名字长度必须大于等于2</string>
+    <string name="id_number_hint">请输入身份证号</string>
+    <string name="id_number_waring">身份证号长度必须为18位</string>
+    <string name="share_success">分享完成</string>
+    <string name="share_fail">分享失败</string>
+    <string name="share_cancel">分享取消</string>
+
+    <!-- commGetVerify -->
+    <string name="get_verify">获取验证码</string>
+    <string name="get_verify2">获取邮箱验证码</string>
+    <string name="re_get_verify">重新获取</string>
+
+
+    <!--禁止输入中文 包含中文状态下的字符-->
+    <string name="no_input_chinese">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+    <string name="input_number">0123456789</string>
+    <string name="input_id_number">0123456789Xx</string>
+    <string name="input_number2english">abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <!--email的输入判断 配合inputType="textEmailAddress"-->
+    <string name="input_email">abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@.</string>
+</resources>

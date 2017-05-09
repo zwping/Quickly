@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--@Deprecated 沉浸式是App必须的功能，但不可以放在Theme，这样影响到任何相关联的模块 =不作用于功能的直接使用，不可控=-->
+    <style name="ImageTranslucentTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--fitsSystemWindows该属性在AppTheme中设置导致正常Toast位置错位，解决之法就是Toast的context为applicationContext，不建议在这使用，具体使用方法详见baseActivity-->
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+</resources>

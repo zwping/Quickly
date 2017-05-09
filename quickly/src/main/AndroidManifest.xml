@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zwp.quickly">
+
+    <!--MD5: 92:C7:94:3B:42:8A:FF:45:F9:7A:BD:E6:B6:46:3F:8C-->
+    <!--SHA1: 5A:E5:F3:D5:52:64:B8:AB:B7:59:76:7F:D5:2F:40:A2:FB:8E:1C:18-->
+    <!--SHA256: 4D:FB:DC:F4:BC:E3:81:46:C2:76:2E:13:55:B5:B1:0A:78:40:68:8F:70:46:D7:F7:04:FF:D2:F9:57:62:65:45-->
+    <!--签名算法名称: SHA1withRSA-->
+    <!--版本: 1-->
+
+    <!--读取外部储存-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--读取系统底层日志-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--允许程序调用killBackgroundProcesses(String).方法结束后台进程-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <!--允许读写系统设置项-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application>
+    </application>
+
+</manifest>

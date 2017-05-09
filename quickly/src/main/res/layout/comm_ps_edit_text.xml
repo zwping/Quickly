@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zwp.quickly.widget.CommEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/et_bg"
+    android:hint="@string/password_hint"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:inputType="textPassword"
+    android:digits="@string/input_email"
+    android:maxLength="20"
+    android:textSize="14sp" />
+
+<!--如果为密码输入，在initView中需要设置
+editText1.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+editText1.setTransformationMethod(PasswordTransformationMethod.getInstance());
+-->

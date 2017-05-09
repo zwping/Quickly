@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zwp.quickly.widget.CommEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_number"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/et_bg"
+    android:hint="@string/id_number_hint"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:digits="@string/input_id_number"
+    android:inputType="text"
+    android:maxLength="18"
+    android:textSize="14sp" />
