@@ -94,8 +94,9 @@ public class CommAddPic extends RelativeLayout {
         recycler.addOnItemTouchListener(new OnItemClickListener() {
             @Override
             public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
-                if (position == mData.size() - 1)
-                    new PhotoPopup(mActivity, "请选择相片", true, max, true);
+                if (CollectionUtils.listIfContainElement(mData, "默认填充数据"))
+                    if (position == mData.size() - 1)
+                        new PhotoPopup(mActivity, "请选择相片", true, max, true);
             }
         });
         recycler.addOnItemTouchListener(new OnItemChildClickListener() {

@@ -22,6 +22,7 @@ import android.support.v4.content.FileProvider;
 import android.webkit.MimeTypeMap;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -33,9 +34,19 @@ import zwp.quickly.custom.CommonScene;
  * <p>    note：
  * <p>  author：zwp on 2017/4/7 mail：1101558280@qq.com web: http://www.zwping.win</p>
  * <table>
- *     <tr>
- *         <th>打开"更多网络设置"界面{@link #openWirelessSettings(Context)}</th>
- *     </tr>
+ * <tr>
+ * <th>
+ * 把图片插入到系统图库 {@link #insertGallery(Context, File)}
+ * </th>
+ * </tr>
+ * <tr>
+ * <th>
+ * 通知图库更新 {@link #notifyImgChangeGallery(Context, File)}
+ * </th>
+ * </tr>
+ * <tr>
+ * <th>打开"更多网络设置"界面{@link #openWirelessSettings(Context)}</th>
+ * </tr>
  * <tr>
  * <th>跳转应用市场 {@link #goToMarket(Context, String)}</th>
  * </tr>
@@ -91,10 +102,10 @@ import zwp.quickly.custom.CommonScene;
  * <th>获取卸载App的意图 {@link #getUninstallAppIntent(String)}</th>
  * </tr>
  * <tr>
- *     <th>获取关机的意图 {@link #getShutdownIntent()}</th>
+ * <th>获取关机的意图 {@link #getShutdownIntent()}</th>
  * </tr>
  * <tr>
- *     <th>获取其他应用组件的意图 {@link #getComponentIntent(String, String)}</th>
+ * <th>获取其他应用组件的意图 {@link #getComponentIntent(String, String)}</th>
  * </tr>
  * </table>
  */
@@ -104,6 +115,32 @@ public class IntentUtils {
     private IntentUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
+
+    /**
+     * 把图片插入到系统图库
+     *
+     * @param context
+     * @param file    图片
+     */
+    public static void insertGallery(Context context, File file) {
+        try {
+            MediaStore.Images.Media.insertImage(context.getContentResolver(),
+                    file.getAbsolutePath(), file.getName(), null);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 通知图库更新
+     *
+     * @param context
+     * @param file    图片
+     */
+    public static void notifyImgChangeGallery(Context context, File file) {
+        context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + file.getPath())));
+    }
+
 
     /**
      * 打开"更多网络设置"界面
@@ -440,6 +477,7 @@ public class IntentUtils {
 
     /**
      * 打开APP
+     *
      * @param context
      * @param packageName
      */
