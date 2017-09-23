@@ -1,9 +1,11 @@
 apply plugin: 'com.android.library'                                                                 //说明module的类型，com.android.application为程序，com.android.library为库
-//apply plugin: 'com.android.application'
+apply plugin: 'com.github.dcendents.android-maven'
 
-def buildSdkVersion = 25
-def buildToolVersion = "25.0.2"
-def supportVersion = "25.2.0"
+group='com.github.zwping'
+
+def buildSdkVersion = 26
+def buildToolVersion = "26.0.1"
+def supportVersion = "26+"
 
 android {
     compileSdkVersion buildSdkVersion                                                               //编译的SDK版本
