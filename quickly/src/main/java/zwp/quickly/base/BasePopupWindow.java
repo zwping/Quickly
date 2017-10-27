@@ -1,4 +1,4 @@
-package zwp.quickly.base;
+﻿package zwp.quickly.base;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -144,6 +144,7 @@ public abstract class BasePopupWindow extends razerdp.basepopup.BasePopupWindow 
 
     /** 相对View显示popupWindow
      * demo: https://github.com/razerdp/BasePopup/blob/master/app/src/main/java/razerdp/demo/popup/CommentPopup.java
+     * 在构造函数中，super(context, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
      * 注意使用showPopupWindow(View) {@link razerdp.basepopup.BasePopupWindow#showPopupWindow(View)}
      * 在showPopupWindow的super();前面设置setOffsetX{@link BasePopupWindow#setOffsetX(int)} 及 setOffsetY{@link razerdp.basepopup.BasePopupWindow#setOffsetY(int)}
      * 在这说下setOffsetX Y，默认showPopupWindow(View)会以view的左上角作为锚点，setOffsetX Y将以popupView的左上角作为对称点，设置popupView的X Y的偏移量
